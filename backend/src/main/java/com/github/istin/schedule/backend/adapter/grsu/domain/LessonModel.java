@@ -18,6 +18,11 @@ public class LessonModel {
 
     private String room;
 
+    private TeacherModel teacher=new TeacherModel();
+
+    private SubGroupModel subgroup=new SubGroupModel();
+
+
     public void setDate(String pDate) {
         date = pDate;
     }
@@ -31,6 +36,8 @@ public class LessonModel {
         optimized.setAddress(this.address);
         optimized.setDate(this.date);
         optimized.setRoom(this.room);
+        optimized.setTeacher(this.teacher.toString());
+        optimized.setSubgroup(this.subgroup.toString());
         return optimized;
     }
 }

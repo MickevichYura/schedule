@@ -210,6 +210,7 @@ public class GrsuAdapter implements IUniversityAdapter {
             inputStream = HttpUtils.getInputStream(GROUP_SCHEDULE_LIST_API+ pGid);
             inputStreamReader = new InputStreamReader(inputStream, "UTF-8");
             bufferedReader = new BufferedReader(inputStreamReader, 8192);
+
             final LessonsResponse scheduleList = new Gson().fromJson(bufferedReader, LessonsResponse.class);
             final List<LessonModel> lessons = scheduleList.getLessons();
             List<Lesson> list = new ArrayList<>();

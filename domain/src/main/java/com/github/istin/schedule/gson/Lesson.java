@@ -2,6 +2,7 @@ package com.github.istin.schedule.gson;
 
 import com.google.gson.annotations.SerializedName;
 
+
 import java.io.Serializable;
 
 /**
@@ -28,6 +29,12 @@ public class Lesson implements Serializable {
 
     @SerializedName("r")
     private String room;
+
+    @SerializedName("teacher")
+    private String teacher;
+
+    @SerializedName("subgroup")
+    private String subgroup;
 
     public String getId() {
         return id;
@@ -83,5 +90,21 @@ public class Lesson implements Serializable {
 
     public void setRoom(String pRoom) {
         room = pRoom;
+    }
+
+    public void setTeacher(String pTeacher) {
+        this.teacher =  pTeacher;
+    }
+
+    public String getTeacher() {
+        return teacher;
+    }
+
+    public void setSubgroup(String pSubgroup) {
+        this.subgroup = pSubgroup;
+    }
+
+    public String getSubgroup() {
+        return subgroup;
     }
 }
